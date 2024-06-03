@@ -55,7 +55,7 @@ TEST(Transactio2n, d2) {
   Account aone(1, 10000);
   Account atwo(2, 10000);
   Transaction tr;
-  EXPECT_NE(true, tr2.Make(aone, atwo, -200));
+  EXPECT_NE(true, tr.Make(aone, atwo, -200));
 }
 using ::testing::AtLeast;
 
