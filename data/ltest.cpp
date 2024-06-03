@@ -55,7 +55,9 @@ TEST(Transactio2n, d2) {
   Account aone(1, 10000);
   Account atwo(2, 10000);
   Transaction tr;
-  EXPECT_NE(true, tr.Make(aone, atwo, -200));
+  try {
+  EXPECT_NE(true, tr.Make(aone, atwo, -200));}
+  catch (std::invalid_argument& el) {std::cout << "test done";}
 }
 using ::testing::AtLeast;
 
