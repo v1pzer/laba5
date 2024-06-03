@@ -51,6 +51,12 @@ TEST(Transaction, function) {
   tr.Make(aone, atwo, 1999);
   EXPECT_EQ(aone.GetBalance(), 10000); EXPECT_EQ(atwo.GetBalance(), 9999);
 }
+TEST(Transactio2n, d2) {
+  Account aone(1, 10000);
+  Account atwo(2, 10000);
+  Transaction tr;
+  EXPECT_NE(true, tr2.Make(aone, atwo, -200));
+}
 using ::testing::AtLeast;
 
 TEST(Account, Mock) {
